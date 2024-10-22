@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link rel="icon" href="images/ProfileDino.ico">
+    <title>Tahir Khadarabad Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #39ACFF;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Tahir Khadarabad</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Socials</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div class="one-third js-fullheight order-md-last img" style="height: 300px; background-image: url(images/bg_main.png);"> 
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Welcome to my corner of the internet!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Tahir Khadarabad</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Undergrad Student  ',
+						'Aspiring Developer  ',
+						 'Experienced Designer   ',
+						 'ML Enthusiast   ',
+						 'Passionate Debater   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+						<!-- <h2>
+							Third year iMTech at the <br> 
+							<span style="font-size: 85%;">
+							  <img src="images/IIITB-White-Logo-PNG.png" alt="IIIT-Bangalore Logo" style="width: 20px; vertical-align: middle; margin-right: 5px;"> 
+							  International Institute of Information Technology Bangalore
+							</span>
+						</h2> -->
+			            <!-- <h2>Third year iMTech at the <br> International Institute of Information Technology Bangalore</h2> -->
+						<h2>Third year iMTech at the </h2>
+						<img src="images/iiitb_new_logo_white.png" alt="Wide IIIT-Bangalore Image" style="width: 70%; margin-top: -15px;">
+						<br>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						
+							<p><a href="https://www.linkedin.com/in/tahirkhadarabad" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a>  
+							<a href="https://github.com/Tah1rTheT1ger" target="_blank" class="btn btn-primary py-3 px-4">Github</a></p> <!-- for white and black buttonbtn btn-white btn-outline-white py-3 px-4-->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Tahir Khadarabad</span></p>
+										<p><span class="title-s">Occupation: </span> <span>Integrated <br> Masters Student</span></p>
+										<p><span class="title-s">College: </span> <span>IIIT-Bangalore</span></p>
+										<p><span class="title-s">Location: </span> <span>Bangalore, Karnataka, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s" style="font-size: 1.5em;">Mastery</p>
+									<span>Programming Skills</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Problem Solving</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>UI/UX Design</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Communication Skills</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I'm a passionate skeptic of Artificial Intelligence, Data Visualization enthusiast, Software Development, and other intriguing realms within Computer Science. I love trying to analyze how computers, social networks have affected and continue to affect human psychology and political consciousness. <br><br>
+
+
+									Gaming is my favorite pastime, particularly grinding Halo Infinite ranked or getting one-tapped in Fortnite once a week. Love watching unnecessarily long game lore videos and reading sci-fi novels that fill in the gaps between game titles. <br><br>
+									
+									
+									Some of the responsibilities I hold in college include: mentoring a team at 8Bit, a student run magazine club, organizing and participating in collegiate level debate competitions and MUNs as a core member of the Debate Society, and hosting stargazing sessions in our Astronomy Club. <br><br>
+									
+									
+									I love learning new things and hope to contribute as much as I can in all aspects of college life. Join me on my journey through time on this lonely blue rock we call home in the universe.
+								</p>
+								<!-- <ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Manufacturing, Finance, Sales &amp; Healthcare</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Computer Application</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Kannada</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, MS Excel, Tableau &amp; Google Looker Studio</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Python, EDA, PostgreSQL, Power BI, MS Excel, Tableau, AWS &amp; Big Data</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Sports, Travelling, Reading</span></li>
+									
+								</ul> -->
+							</div>
+						</div>
+
+
+						<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="5">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/deekshith-k-gowda-8b5a07289" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Integrated Masters Student with 2 years of learning experience at one of India's premiere engineering institutions. <br> Driven by a passion for Software Development, Machine Learning and Human Computer Interaction.</p>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1HfpTCdFbUqb94S0gsH_8DCycLGKnQHvL/view?usp=sharing" target="_blank" class="btn btn-primary py-3 px-3">Download</a></p>
+				</div>
+			</div>
+          </div>
+        </div>
+
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2024 - Dec 2024</span>
+						<h2>Teaching Assistant</h2>
+						<span class="position">IIIT-Bangalore</span>
+						<p class="mt-4">As a Teaching Assistant for HSS 111 Economics-1 under Professor Varadharajan Sridhar, I supported a class of 120 students by providing thorough explanations to clarify complex economic concepts. My role was to ensure students had a solid grasp of the material and could apply their knowledge effectively.</p>
+						    <ul>
+								<li>Delivered concise explanations to guide students through difficult topics, improving their comprehension and engagement with the course.</li>
+								<li>Crafted 60+ challenging quiz and exam questions to assess students' understanding of core economic concepts.</li>
+								<li>Provided academic support by addressing individual queries, helping students achieve a deeper understanding of the subject.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2024 - July 2024</span>
+						<h2>UI/UX Design Intern</h2>
+						<span class="position">Think Logic Tech Solutions Pvt. Ltd.</span>
+						<p class="mt-4">Think Logic Tech Solutions Pvt. Ltd. is a dynamic startup at the IIIT-B Innovation Center, focused on creating user-centered digital solutions. The company emphasizes innovative web design and seamless collaboration between design and development to deliver impactful, intuitive products.</p>
+							<ul>
+								<li>Researched UX principles to design and prototype websites using Figma, ensuring a user-centered approach from concept to execution.</li>
+								<li>Collaborated with the development team to enhance UI/UX, aligning design with client needs for both functionality and appeal.</li>
+								<li>Contributed to the completion of key design elements, gaining expertise in digital design and cross-functional teamwork.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<style>
+			.resume-wrap {
+				height: 100%; /* Adjust this value as needed */
+			}
+		</style>
+
+		<div class="row">
+			<h1 class="big-4">Leadership</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+		<style>
+			.row {
+				margin-top: 20px; /* Decrease this value to reduce the gap between rows */
+			}
+		</style>
+
+		<div class="row">
+			<!-- Card 1 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Dec 2022 - Present</span>
+					<h2>
+						<img src="images/8BitLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px;" alt="8Bit IIIT-Bangalore Logo" class="logo-small"> 
+						8Bit Magazine Club IIIT-Bangalore
+					</h2>
+					<span class="position">
+						Mentor, Design Lead
+					</span>
+					<p class="mt-4">Published two editions of our college's student-run magazine, organized competitions for the student body.</p>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Oct 2023 - Present</span>
+					<h2>
+						<img src="images/EclipseLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px" alt="ECLIPSE IIIT-Bangalore Logo" class="logo-small"> 
+						ECLIPSE Astronomy Club IIIT-Bangalore
+					</h2>
+					<span class="position">
+						<!-- <img src="path_to_logo2.png" alt="Org 2 Logo" class="logo-small"> -->
+						Core Member
+					</span>
+					<p class="mt-4">Organized stargazing sessions and discussions on space exploration and research.</p>
+				</div>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Jan 2024 - Present</span>
+					<h2>
+						<img src="images/DebLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px" alt="DebSoc IIIT-Bangalore Logo" class="logo-small"> 
+						Debate Society <br> IIIT-Bangalore
+					</h2>
+					<span class="position">
+						<!-- <img src="path_to_logo3.png" alt="Org 3 Logo" class="logo-small"> -->
+						Core Member
+					</span>
+					<p class="mt-4">Organized and participated in several formats of intra & inter collegiate debate competitions.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- Card 4 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Aug 2024 - Present</span>
+					<h2>
+						<img src="images/AnubhavaLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px" alt="Anubhava IIIT-Bangalore Logo" class="logo-small"> 
+						Anubhava Career Blog IIIT-Bangalore
+					</h2>
+					<span class="position">
+						<!-- <img src="path_to_logo4.png" alt="Org 4 Logo" class="logo-small"> -->
+						Social Media Manager
+					</span>
+					<p class="mt-4">Assisted in filming interviews and curating posts for YouTube and LinkedIn social media pages. </p>
+				</div>
+			</div>
+
+			<!-- Card 5 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Aug 2024 - Present</span>
+					<h2>
+						<img src="images/ZenseLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px" alt="Zense IIIT-Bangalore Logo" class="logo-small"> 
+						Zense Open-Source Club IIIT-Bangalore
+					</h2>
+					<span class="position">
+						<!-- <img src="path_to_logo5.png" alt="Org 5 Logo" class="logo-small"> -->
+						UX Designer, Outreach Lead
+					</span>
+					<p class="mt-4">Designed user interfaces for active projects in the club. Led a team to curate content for our social media pages.</p>
+				</div>
+			</div>
+
+			<!-- Card 6 -->
+			<div class="col-md-4">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">Oct 2024 - Present</span>
+					<h2>
+						<img src="images/GDGLogoCirc.png" style="width: 90%; margin-top: 10px; margin-bottom: 10px" alt="Zense IIIT-Bangalore Logo" class="logo-small"> 
+						GDG On Campus • IIIT-Bangalore
+					</h2>
+					<span class="position">
+						<!-- <img src="path_to_logo6.png" alt="Org 6 Logo" class="logo-small"> -->
+						Design Lead
+					</span>
+					<p class="mt-4">Designed posters, banners for events conducted by the chapter. Created posts for the club's social media pages.</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022 - 2027</span>
+    					<h2>Integrated Master of Technology</h2>
+    					<span class="position">International Institute of Information Technology Bangalore</span>
+    					<p class="mt-4">CGPA: 3.38/4.00 (4 Semesters)</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020 - 2022</span>
+    					<h2>High School Diploma</h2>
+    					<span class="position">Narayana Junior College, Madhapur, Hyderabad</span>
+    					<p class="mt-4">CBSE Marks: 477/500</p>
+    				</div>
+				</div>
+    		</div>
+
+    	
+    	</div>
+    </section>
+
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Here are some of the exciting projects I've built using C, C++, Java, Python, and a variety of other tools and frameworks during my awesome journey at IIIT-B!</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/sassy2711/Yoga_Pose_Corrector" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/flexcellent.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/sassy2711/Yoga_Pose_Corrector" target="_blank">Flexcellent - Yoga Pose Correcting Application</a></h3>
+                <p>A Yoga Pose Corrector app that uses computer vision to detect poses in real-time, compares them to ideal references, and provides instant feedback to improve their form. It uses OpenCV and mediapipe to help users correct postures efficiently, with audio feedback for hands-free use. Used websockets for server-client interaction.</p>
+				<p>Tools Used: Flutter, Dart, Python, OpenCV</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/KondapalliTarun3474/Intelligent-Fruit-Detection" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/fruitdetection.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/KondapalliTarun3474/Intelligent-Fruit-Detection" target="_blank">Fruit Detection System for the Visually Impaired</a></h3>
+                <p>A Fruit Detection System designed for the visually impaired, using deep learning and computer vision to identify twelve fruits. It incorporates hand gesture tracking and voice interaction for a completely touch-free experience, with ReactJS and Streamlit front-ends providing accessible interfaces with text-to-speech functionality.</p>
+				<p>Tools Used: Python, OpenCV, Tensorflow, Keras, ReactJS</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Tah1rTheT1ger/LibraryManagement" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/olms.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Tah1rTheT1ger/LibraryManagement" target="_blank">Online Library Management System - OLMS</a></h3>
+                <p>Developed a multithreaded OLMS. The server has features like file locking to prevent race conditions, concurrency handling for multiple clients, and password authentication. It also has library functions for adding, searching, updating, and deleting books. The client-side connects to the server and browse, borrow available books.</p>
+				<p>Tools Used: Linux, C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<!-- <br> -->
+	<div class="container">
+        <!-- <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Here are some of the exciting projects I've built using C, C++, Java, Python, and a variety of other tools and frameworks during my awesome journey at IIIT-B!</p>
+          </div>
+        </div> -->
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/pradyunuydarp/Imageffects" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/imageeffects.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/pradyunuydarp/Imageffects" target="_blank">Image Effects Web Application</a></h3>
+                <p>Developed a Web Application that applies various image effects to JPEG or PNG images, with a logging system. Users can choose effects such as Brightness, Contrast, Blur, Greyscale, Sepia, and more, with the option to download the edited image. The effects are implemented in C++ and accessed via a Java wrapper using JNI.</p>
+				<p>Tools Used: Java, C++, JNI</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Tah1rTheT1ger/MIPS" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/mips.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Tah1rTheT1ger/MIPS" target="_blank">MIPS Processor Simulator</a></h3>
+                <p>Developed a MIPS assembler and processor simulation in Python. The assembler converts MIPS assembly language to machine code, and the processor simulates execution. It includes instruction fetching, decoding, execution, memory access, and write-back stages, with non-pipelined and pipelined versions implemented separately.</p>
+				<p>Tools Used: Python</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://circuitverse.org/users/156302/projects/mastermind-5cc676f8-b56a-44d8-a96d-64a57421b64e" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/mastermind.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://circuitverse.org/users/156302/projects/mastermind-5cc676f8-b56a-44d8-a96d-64a57421b64e" target="_blank">MasterMind using Digital Logic</a></h3>
+                <p>Developed a working version of the board game "MasterMind" a.k.a "Cows and Bulls" or "Code Breaker." We implemented it on CircuitVerse using combinatorial circuits with buffers, counters, flip-flops, and logic gates. The game's logic was built from scratch, including random code generation, guess checking, and feedback generation, with full functionality.</p>
+				<p>Tools Used: CircuitVerse</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	</div>
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/DeekshithKGowda/Road-Accident-Analysis-Power-BI" class="block-20 zoom-effect" style="background-image: url('images/project4.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/DeekshithKGowda/Road-Accident-Analysis-Power-BI">Road Accident Analysis Project</a></h3>
+				  <p>Designed an in depth tracking and analysis report for recurring traffic incidents, and developed a comprehensive tracking and analysis report for recurrent traffic accidents. </p>
+				  <p>Tools Used: Power BI</p>
+				</div>
+			  </div>
+			</div>
+		 	</div>
+		</div> -->
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="6">0</a></strong>
+                <span>Clubs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/HaloWallpaper.png)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<p><a href="https://github.com/Tah1rTheT1ger" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<br> 	
+						<div class="heading"> 
+							<!-- <h3>Since</h3> -->
+							<h3><b>"Because learning is more than <br> paper, pencil and books."</b></h3>
+							<!-- <h3>I enjoy to solve business data problems &amp; uncover hidden data stories.</h3> -->
+						
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Socials</h1>
+            <h2 class="mb-4">Social Media</h2>
+            <p>"Focus on how to be social, not on how to do social."</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="https://www.google.com/maps/d/u/0/viewer?mid=1jjdOnB91E1dK8dHGVI3h8cHWE40&hl=en_US&ll=13.072006049550708%2C77.63024850000004&z=11" target="_blank">Bangalore, India</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="https://youtu.be/wVyu7NB7W6Y" target="_blank">Click To Copy</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:tahirkhadarabad@gmail.com" target="_blank">Click For Email</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Alt Portfolio</h3>
+	            <p><a href="https://sites.google.com/view/tahirkhadarabad/" target="_blank">Click Here</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question? </span> <a href="https://www.linkedin.com/in/tahirkhadarabad/" target="_blank" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on </li>
+					  
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/tahirkhadarabad/" target="_blank"><span class="icon-linkedin"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/@Tah1rTheT1ger" target="_blank"><span class="icon-youtube"></span></a></li>
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span class="icon-facebook"></span></a></li> -->
+				      <li class="ftco-animate"><a href="https://www.instagram.com/iamtah1r/" target="_blank"><span class="icon-instagram"></span></a></li>
+					  <li class="ftco-animate"><a href="https://github.com/Tah1rTheT1ger" target="_blank"><span class="icon-github"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
